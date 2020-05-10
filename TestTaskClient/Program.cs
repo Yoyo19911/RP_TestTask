@@ -1,12 +1,11 @@
 ﻿using Microsoft.VisualStudio.Threading;
 using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading;
-using System.Net.Sockets;
+using System.Threading.Tasks;
 
 namespace TestTaskClient
 {
@@ -37,6 +36,7 @@ namespace TestTaskClient
         /// </summary>
         private static void InitialSetup()
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Загрузка..");
 
             client = new HttpClient() { BaseAddress = new Uri(serverUri) };
